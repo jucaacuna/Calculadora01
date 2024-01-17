@@ -2,18 +2,18 @@ package logica;
 
 public class Suma extends OperacionA {
 
-	@Override
-	public void setNum(byte a, byte b) {
-		// TODO Auto-generated method stub
-		numero1 = a;
-		numero2 = b;
+	Suma(){
+		super();
+	}
+	
+	Suma(byte a, byte b) {
+		super(a, b);
 
 	}
 
 	@Override
 	public byte cuenta() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (byte) (numero1 + numero2);
 	}
 
 }

@@ -4,11 +4,19 @@ public abstract class OperacionA implements Operacion {
 	
 	public byte numero1;
 	public byte numero2;
+	
+	OperacionA(){
+		
+	}
+	
+	OperacionA (byte a, byte b){
+		setNum(a, b);
+	}
 
 	@Override
 	public void setNum(byte a, byte b) {
-		// TODO Auto-generated method stub
-
+		numero1 = a;
+		numero2 = b;
 	}
 
 	@Override
