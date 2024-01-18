@@ -6,7 +6,7 @@ public class Resta extends OperacionA {
 		super();
 	}
 
-	Resta(byte a, byte b) {
+	public Resta(byte a, byte b) {
 		super(a, b);
 	}
 

@@ -6,10 +6,11 @@ public class Division extends OperacionA {
 		super();
 	}
 
-	Division(byte a, byte b) {
+	public Division(byte a, byte b) {
 		super(a, b);
 	}
 	
+	@Override
 	public byte cuenta() {
 		return (byte) (numero1 / numero2);
 	}

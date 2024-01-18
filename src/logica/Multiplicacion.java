@@ -6,7 +6,7 @@ public class Multiplicacion extends OperacionA {
 		super();
 	}
 
-	Multiplicacion(byte a, byte b){
+	public Multiplicacion(byte a, byte b){
 		super(a, b);
 	}
 	

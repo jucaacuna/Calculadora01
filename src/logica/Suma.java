@@ -6,7 +6,7 @@ public class Suma extends OperacionA {
 		super();
 	}
 	
-	Suma(byte a, byte b) {
+	public Suma(byte a, byte b) {
 		super(a, b);
 	}
 
