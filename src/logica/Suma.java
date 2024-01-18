@@ -8,7 +8,6 @@ public class Suma extends OperacionA {
 	
 	Suma(byte a, byte b) {
 		super(a, b);
-
 	}
 
 	@Override

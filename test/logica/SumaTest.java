@@ -11,8 +11,7 @@ public class SumaTest {
 	@Test
 	public void Suma2y1test() {
 		s.setNum((byte) 2, (byte) 1);
-		assertEquals(s.cuenta(), 3);
+		assertEquals(s.cuenta(), (byte) 3);
 		
 	}
-
 }

@@ -3,7 +3,7 @@ package logica;
 interface Operacion {
 
 
-	/* Cargar los números a operar.
+	/* Carga los números a operar.
 	 * */
 	public void setNum(byte a, byte b);
 
