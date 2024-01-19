@@ -21,7 +21,7 @@ public class Menu {
 		System.out.println("\n ######################################################### ");
 		System.out.println(" Bienvenido a la calculadora.");
 		System.out.println(" ######################################################### ");
-		System.out.print("Ingrese primer número: "); a = s.nextByte();
+		System.out.print("Ingrese primer número: "); a = s.nextByte(); //validar numero
 		System.out.print("Ingrese segundo número: "); b = s.nextByte();
 		return o = operar();
 	}
