@@ -6,6 +6,7 @@ public class Ejecutor {
 		Menu m = new Menu();
 		m.iniciar();
 
+		System.out.println("### FIN DEL PROGRAMA ###");
 	}
 
 }
