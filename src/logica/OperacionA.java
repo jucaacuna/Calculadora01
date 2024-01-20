@@ -12,7 +12,8 @@ public abstract class OperacionA implements Operacion {
 		setNum(a, b);
 	}
 
-	@Override
+	/* Carga los números a operar.
+	 * */
 	public void setNum(byte a, byte b) {
 		numero1 = a;
 		numero2 = b;
@@ -20,9 +21,8 @@ public abstract class OperacionA implements Operacion {
 
 	@Override
 	public byte cuenta() {
-		// TODO Auto-generated method stub
-		byte valor = 0;
-		return  valor;
+		byte resultado = 0;
+		return  resultado;
 	}
 
 }
