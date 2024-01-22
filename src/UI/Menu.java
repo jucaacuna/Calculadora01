@@ -2,14 +2,13 @@ package UI;
 
 import java.util.Scanner;
 
-import logica.Division;
-import logica.Multiplicacion;
-import logica.Resta;
+
+import logica.OperacionA;
 import logica.Suma;
 
 public class Menu {
 	Scanner s;
-	byte a, b;
+	Byte a, b;
 	
 	
 	Menu(){
@@ -17,13 +16,12 @@ public class Menu {
 	}
 	
 	String opciones () {
-		String o ="";
 		System.out.println("\n ######################################################### ");
 		System.out.println(" Bienvenido a la calculadora.");
 		System.out.println(" ######################################################### ");
-		System.out.print("Ingrese primer número: "); a = s.nextByte(); //validar numero
-		System.out.print("Ingrese segundo número: "); b = s.nextByte();
-		return o = operar();
+		System.out.print("Ingrese primer número: "); a = Byte.valueOf(s.nextByte()); //falta validar numero
+		System.out.print("Ingrese segundo número: "); b = Byte.valueOf(s.nextByte());
+		return operar();
 	}
 	
 	String operar() {
@@ -47,24 +45,25 @@ public class Menu {
 	
 	void iniciar() {
 		s = new Scanner(System.in);
+		OperacionA operacion;
 		String op ="";
 		while (!op.contains("s")) {
 			op = opciones();
 			if (op.contains("+")) {
-				Suma su = new Suma(a, b);
-				System.out.println("La suma da: " + su.cuenta());
-			} else if(op.contains("-")) {
-				Resta r = new Resta(a, b);
+				operacion = new Suma(a, b);
+				System.out.println("La suma da: " + operacion.getResultado().toString());
+			}/* else if(op.contains("-")) {
+				operacion = new Resta(a, b);
 				System.out.println("La resta da: " + r.cuenta());
 			} else if (op.contains("*")) {
-				Multiplicacion m = new Multiplicacion(a, b);
+				operacion = new Multiplicacion(a, b);
 				System.out.println("La multiplicación da: " + m.cuenta());
 			} else if(op.contains("/")) {
-				Division d = new Division(a, b);
+				operacion = new Division(a, b);
 				System.out.println("La división da: " + d.cuenta());
 			} else if(op.contains("s")) {
 				break;
-			}
+			}*/
 		}
 		s.close();
 	}

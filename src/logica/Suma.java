@@ -6,13 +6,14 @@ public class Suma extends OperacionA {
 		super();
 	}
 	
-	public Suma(byte a, byte b) {
+	public Suma(Byte a, Byte b) {
 		super(a, b);
 	}
-
+	
 	@Override
-	public byte cuenta() {
-		return (byte) (numero1 + numero2);
+	public void cuenta() {
+		resultado = Byte.valueOf( (byte) (numero1.byteValue() + numero2.byteValue()));
 	}
+	
 
 }

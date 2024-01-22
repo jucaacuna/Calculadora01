@@ -5,30 +5,36 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class SumaTest {
+	private Suma s;
+	private byte a,b,resultadoEsperado;
+	private Byte x, y, z;
 	
-	Suma s = new Suma();
-	byte resultadoEsperado;
-
 	@Test
 	public void Suma2y1test() {
-		s.setNum((byte) 2, (byte) 1);
-		resultadoEsperado=3;
-		assertEquals(s.cuenta(), resultadoEsperado);
-		
+		a=2; b=1; resultadoEsperado=3;
+		x = Byte.valueOf(a);
+		y = Byte.valueOf(b);
+		z = Byte.valueOf(resultadoEsperado);
+		s = new Suma(x,y);
+		assertEquals(s.getResultado().byteValue(),z.byteValue());
 	}
 	
 	@Test (expected = Exception.class)
 	public void SumaGRANDEtest() {
-		s.setNum((byte) 127, (byte) 10);
-		s.cuenta();
+		a=127; b=1;
+		x = Byte.valueOf(a);
+		y = Byte.valueOf(b);
+		s = new Suma(x,y);
 	}
-	
+
 	@Test
 	public void SumaBajatest() {
-		s.setNum((byte) -127, (byte) -1);
-		resultadoEsperado=-128;
-		assertEquals(s.cuenta(), resultadoEsperado);
-		
+		a=-127; b=-1; resultadoEsperado=-128;
+		x = Byte.valueOf(a);
+		y = Byte.valueOf(b);
+		z = Byte.valueOf(resultadoEsperado);
+		s = new Suma(x,y);
+		assertEquals(s.getResultado().byteValue(),z.byteValue());
 	}
 	
 	

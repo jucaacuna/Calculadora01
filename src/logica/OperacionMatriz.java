@@ -1,27 +1,30 @@
 package logica;
 
 public abstract class OperacionMatriz implements Operacion {
-	protected Matriz m1, m2;
+	
+	protected Matriz m1, m2, resultado;
 
 	public OperacionMatriz() {
 		
 	}
 	
-	public OperacionMatriz(Matriz a, Matriz b) {
+	public OperacionMatriz (Matriz a, Matriz b) {
 		setOperadores(a,b);
 	}
 	
-	/* Carga los elementos (de tipo Matriz) a operar.
+	/* 
+	 * Carga los elementos (de tipo Matriz) a operar.
 	 * */
-	public void setOperadores(Matriz a, Matriz b) {
-		m1 = a;
-		m1 = b;
+	public void setOperadores (Matriz a, Matriz b) {
+		m1 = new Matriz(a);
+		m1 = new Matriz(b);
 	}
 
-	@Override
-	public byte cuenta() {
-
-		return 0;
+	/*
+	 * Devuelve el resultado almacenado en la variable homónima.
+	 * */
+	public Matriz getResultado() {
+		cuenta();
+		return resultado;
 	}
-
 }

@@ -2,27 +2,29 @@ package logica;
 
 public abstract class OperacionA implements Operacion {
 	
-	protected byte numero1, numero2;
+	protected Byte numero1, numero2, resultado;
 	
-	OperacionA(){
+	OperacionA() {
 		
 	}
 	
-	OperacionA (byte a, byte b){
-		setNum(a, b);
+	OperacionA (Byte a, Byte b) {
+		setOperadores(a, b);
 	}
 
-	/* Carga los números a operar.
+	/*
+	 * Recibe los operadores como parámetros y los carga en las variables locales.
 	 * */
-	public void setNum(byte a, byte b) {
-		numero1 = a;
-		numero2 = b;
+	public void setOperadores (Byte a, Byte b) {
+		numero1 = Byte.valueOf(a.byteValue());
+		numero2 = Byte.valueOf(b.byteValue());
 	}
 
-	@Override
-	public byte cuenta() {
-		byte resultado = 0;
-		return  resultado;
+	/*
+	 * Devuelve el resultado almacenado en la variable homónima.
+	 * */
+	public Byte getResultado() {
+		cuenta();
+		return resultado;
 	}
-
 }

@@ -1,12 +1,19 @@
 package logica;
 
 /*
- * Se espera de todas las operaciones que tengan un método para el cálculo y un vaor de retorno del tipo byte. Esto limitará a todo el sistema respecto al rango de valor que podrá manejar.
+ * Se debe contar con 3 variables de clase: operador1, operador2 y resultado. Ajustando su tipo según corresponda.
+ * 
  * */
 interface Operacion {
 
-	/* Realiza la operación y retorna el resultado.
+	
+	/* Realiza la operación y asigna el resultado a una variable miembro de clase.
 	 * */
-	public byte cuenta();
+	public void cuenta();
+	
+	/*
+	 * Devuelve el resultado almacenado en la variable.
+	 * */
+	public Object getResultado();
 
 }

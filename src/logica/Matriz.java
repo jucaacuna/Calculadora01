@@ -4,9 +4,13 @@ import java.util.Scanner;
 
 public class Matriz {
 
-	byte[][] m;
+	private byte[][] m;
 	
-	public Matriz(byte f, byte c) { 	// debe ser mayor que 0
+	Matriz(Matriz a){
+		m = a.clonar();
+	}
+	
+	Matriz(byte f, byte c) { 	// debe ser mayor que 0
 		m = new byte[f][c];
 	}
 	
@@ -44,5 +48,8 @@ public class Matriz {
 	public String tamaño() {
 		return ("Tamaño: [" + m.length + "]x[" + m[0].length + "]");
 	}
-
+	
+	public byte[][] clonar() {
+		return m.clone();
+	}
 }
