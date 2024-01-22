@@ -15,5 +15,4 @@ interface Operacion {
 	 * Devuelve el resultado almacenado en la variable.
 	 * */
 	public Object getResultado();
-
 }

@@ -2,7 +2,7 @@ package logica;
 
 public class Suma extends OperacionA {
 
-	Suma(){
+	Suma() {
 		super();
 	}
 	
@@ -14,6 +14,4 @@ public class Suma extends OperacionA {
 	public void cuenta() {
 		resultado = Byte.valueOf( (byte) (numero1.byteValue() + numero2.byteValue()));
 	}
-	
-
 }
