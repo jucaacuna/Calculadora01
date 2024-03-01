@@ -30,12 +30,15 @@ public abstract class OperacionA implements Operacion {
   public void setOperador(Byte a) {
     numero1 = Byte.valueOf(a.byteValue());
   }
+  
+  public void setResultado(Byte r) {
+    resultado = r;
+  }
 
   /*
    * Devuelve el resultado almacenado en la variable homónima.
    */
   public Byte getResultado() {
-    cuenta();
     return resultado;
   }
 }

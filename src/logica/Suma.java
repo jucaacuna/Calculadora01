@@ -12,6 +12,6 @@ public class Suma extends OperacionA {
 
   @Override
   public void cuenta() {
-    resultado = Byte.valueOf((byte) (numero1.byteValue() + numero2.byteValue()));
+    setResultado (Byte.valueOf((byte) (numero1.byteValue() + numero2.byteValue())));
   }
 }
