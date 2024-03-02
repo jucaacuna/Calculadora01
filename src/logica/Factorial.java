@@ -8,12 +8,12 @@ public class Factorial extends OperacionA {
 
   public Factorial(Byte a) {
     super(a);
-    // TODO Auto-generated constructor stub
+    cuenta();
   }
 
   @Override
   public void cuenta() {
-    resultado = Byte.valueOf(cuentaAux(numero1.byteValue()));
+    setResultado(Byte.valueOf(cuentaAux(numero1.byteValue())));
   }
 
   public byte cuentaAux(byte a) {

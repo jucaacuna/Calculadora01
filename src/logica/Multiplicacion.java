@@ -8,12 +8,13 @@ public class Multiplicacion extends OperacionA {
 
   public Multiplicacion(Byte a, Byte b) {
     super(a, b);
+    cuenta();
 
   }
 
   @Override
   public void cuenta() {
-    resultado = Byte.valueOf((byte) (numero1.byteValue() * numero2.byteValue()));
+    setResultado(Byte.valueOf((byte) (numero1.byteValue() * numero2.byteValue())));
 
   }
 
