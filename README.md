@@ -6,4 +6,4 @@ Para la implementación se sigue la [Google Style Guide](https://google.github.i
 
 Paquetes
 
-[![Lógica](https://github.com/jucaacuna/Calculadora01/blob/main/extras/img/logica.png)]
+![Lógica](https://github.com/jucaacuna/Calculadora01/blob/main/extras/img/logica.png)]
