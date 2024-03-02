@@ -4,11 +4,13 @@ public class Resta extends OperacionA {
 
   Resta() {
     super();
+    this.tipo = '-';
   }
 
   public Resta(Byte a, Byte b) {
     super(a, b);
     cuenta();
+    this.tipo = '-';
   }
 
   @Override

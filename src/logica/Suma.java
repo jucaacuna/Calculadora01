@@ -4,11 +4,13 @@ public class Suma extends OperacionA {
 
   Suma() {
     super();
+    this.tipo = '+';
   }
 
   public Suma(Byte a, Byte b) {
     super(a, b);
     cuenta();
+    this.tipo = '+';
   }
 
   @Override

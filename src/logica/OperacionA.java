@@ -3,6 +3,7 @@ package logica;
 public abstract class OperacionA implements Operacion {
 
   protected Byte numero1, numero2, resultado;
+  protected char tipo;
 
   OperacionA() {
 

@@ -9,6 +9,7 @@ import logica.Multiplicacion;
 import logica.OperacionA;
 import logica.Resta;
 import logica.Suma;
+import persistencia.PersistirArchivo;
 
 public class Menu {
   Scanner s;
@@ -46,18 +47,23 @@ public class Menu {
       if (op.contains("+")) {
         operacion = new Suma(a, b);
         System.out.println("La suma da: " + operacion.getResultado().toString());
+        PersistirArchivo.alArchivo(operacion);
       } else if (op.contains("-")) {
         operacion = new Resta(a, b);
         System.out.println("La resta da: " + operacion.getResultado().toString());
+        PersistirArchivo.alArchivo(operacion);
       } else if (op.contains("*")) {
         operacion = new Multiplicacion(a, b);
         System.out.println("La multiplicación da: " + operacion.getResultado().toString());
+        PersistirArchivo.alArchivo(operacion);
       } else if (op.contains("/")) {
         operacion = new Division(a, b);
         System.out.println("La división da: " + operacion.getResultado().toString());
+        PersistirArchivo.alArchivo(operacion);
       } else if(op.contains("!")) {
         operacion = new Factorial (a);
         System.out.println("El factorial da: " + operacion.getResultado().toString());
+        PersistirArchivo.alArchivo(operacion);
       } else if (op.contains("s")) {
         break;
       }
@@ -68,7 +74,7 @@ public class Menu {
     boolean bandera = true;
     String op = "";
     System.out.print("Ingrese primer número: ");
-    a = Byte.valueOf(s.nextByte()); // falta validar numero
+    a = Byte.valueOf(s.nextByte()); //PENDIENTE: falta validar numero
     System.out.print("Ingrese segundo número: ");
     b = Byte.valueOf(s.nextByte());
     while (bandera) {

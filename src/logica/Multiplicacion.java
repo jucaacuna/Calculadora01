@@ -4,10 +4,12 @@ public class Multiplicacion extends OperacionA {
 
   public Multiplicacion() {
     super();
+    this.tipo = '*';
   }
 
   public Multiplicacion(Byte a, Byte b) {
     super(a, b);
+    this.tipo = '*';
     cuenta();
 
   }

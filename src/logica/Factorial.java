@@ -3,11 +3,13 @@ package logica;
 public class Factorial extends OperacionA {
 
   public Factorial() {
-    // TODO Auto-generated constructor stub
+    super();
+    this.tipo = '!';
   }
 
   public Factorial(Byte a) {
     super(a);
+    this.tipo = '!';
     cuenta();
   }
 

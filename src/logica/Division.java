@@ -4,10 +4,12 @@ public class Division extends OperacionA {
 
   public Division() {
     super();
+    this.tipo = '/';
   }
 
   public Division(Byte a, Byte b) {
     super(a, b);
+    this.tipo = '/';
     cuenta();
   }
 
