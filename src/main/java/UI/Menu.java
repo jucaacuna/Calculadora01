@@ -60,8 +60,8 @@ public class Menu {
         operacion = new Division(a, b);
         System.out.println("La división da: " + operacion.getResultado().toString());
         PersistirArchivo.alArchivo(operacion);
-      } else if(op.contains("!")) {
-        operacion = new Factorial (a);
+      } else if (op.contains("!")) {
+        operacion = new Factorial(a);
         System.out.println("El factorial da: " + operacion.getResultado().toString());
         PersistirArchivo.alArchivo(operacion);
       } else if (op.contains("s")) {
@@ -74,12 +74,12 @@ public class Menu {
     boolean bandera = true;
     String op = "";
     System.out.print("Ingrese primer número: ");
-    a = Byte.valueOf(s.nextByte()); //PENDIENTE: falta validar numero
+    a = Byte.valueOf(s.nextByte()); // PENDIENTE: falta validar numero
     System.out.print("Ingrese segundo número: ");
     b = Byte.valueOf(s.nextByte());
     while (bandera) {
       System.out.print("para sumar +\n" + "para restar -\n" + "para dividir /\n"
-          + "para multiplicar *\n" + "para factorial!\n" +"para salir s\n" + "-> ");
+          + "para multiplicar *\n" + "para factorial!\n" + "para salir s\n" + "-> ");
       op = s.next().toString();
       if (op.matches("[+-/*s!]")) {
         bandera = false;
